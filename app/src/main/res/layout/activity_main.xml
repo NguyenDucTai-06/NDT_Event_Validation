@@ -36,6 +36,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_full_name"
+            app:counterEnabled="true"
+            app:counterMaxLength="50"
+            app:helperText="@string/helper_full_name"
             app:startIconDrawable="@android:drawable/ic_menu_myplaces">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -55,6 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="@string/hint_email"
+            app:helperText="@string/helper_email"
             app:startIconDrawable="@android:drawable/ic_dialog_email">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -74,6 +78,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="@string/hint_phone"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+            app:helperText="@string/helper_phone"
             app:startIconDrawable="@android:drawable/stat_sys_phone_call">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -93,6 +100,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="@string/hint_student_id"
+            app:counterEnabled="true"
+            app:counterMaxLength="13"
+            app:helperText="@string/helper_student_id"
             app:startIconDrawable="@android:drawable/ic_menu_info_details">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -112,6 +122,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="@string/hint_class_name"
+            app:helperText="@string/helper_class_name"
             app:startIconDrawable="@android:drawable/ic_menu_agenda">
 
             <com.google.android.material.textfield.TextInputEditText

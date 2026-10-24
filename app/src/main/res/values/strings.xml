@@ -9,7 +9,33 @@
     <string name="hint_phone">Số điện thoại</string>
     <string name="hint_student_id">Mã sinh viên (MSV)</string>
     <string name="hint_class_name">Lớp</string>
+    <string name="helper_full_name">VD: Nguyễn Văn An</string>
+    <string name="helper_email">VD: an.nguyen@gmail.com</string>
+    <string name="helper_phone">10 số, bắt đầu bằng 03, 05, 07, 08, 09</string>
+    <string name="helper_student_id">Gồm 13 chữ số, VD: 2415053122240</string>
+    <string name="helper_class_name">VD: 22T1, 21DTHA2</string>
     <string name="btn_register">Đăng kí</string>
+    <string name="msg_fix_errors">Có %1$d trường thông tin chưa hợp lệ, vui lòng kiểm tra lại!</string>
+    <string name="msg_register_success">Đăng kí thành công!</string>
+
+    <!-- Thông báo lỗi validation -->
+    <string name="err_name_empty">Họ tên không được để trống</string>
+    <string name="err_name_invalid">Họ tên chỉ được chứa chữ cái và khoảng trắng</string>
+    <string name="err_name_too_short">Vui lòng nhập đầy đủ họ và tên (ít nhất 2 từ)</string>
+    <string name="err_name_too_long">Họ tên không được vượt quá 50 ký tự</string>
+    <string name="err_email_empty">Email không được để trống</string>
+    <string name="err_email_invalid">Email không đúng định dạng (VD: abc@gmail.com)</string>
+    <string name="err_phone_empty">Số điện thoại không được để trống</string>
+    <string name="err_phone_not_digit">Số điện thoại chỉ được chứa chữ số</string>
+    <string name="err_phone_length">Số điện thoại phải gồm đúng 10 chữ số</string>
+    <string name="err_phone_invalid">Đầu số không hợp lệ (phải bắt đầu bằng 03, 05, 07, 08, 09)</string>
+    <string name="err_student_id_empty">Mã sinh viên không được để trống</string>
+    <string name="err_student_id_not_digit">Mã sinh viên chỉ được chứa chữ số</string>
+    <string name="err_student_id_length">Mã sinh viên phải gồm đúng 13 chữ số</string>
+    <string name="err_class_empty">Lớp không được để trống</string>
+    <string name="err_class_invalid">Tên lớp chỉ gồm chữ cái, chữ số (VD: 22T1)</string>
+    <string name="err_class_length">Tên lớp phải từ 2 đến 15 ký tự</string>
+    <string name="err_class_need_digit">Tên lớp phải chứa khoá học (chữ số), VD: 22T1</string>
 
     <!-- Màn hình Chi tiết -->
     <string name="title_detail">Thông tin chi tiết</string>
