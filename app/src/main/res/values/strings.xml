@@ -15,6 +15,7 @@
     <string name="helper_student_id">Gồm 13 chữ số, VD: 2415053122240</string>
     <string name="helper_class_name">VD: 22T1, 21DTHA2</string>
     <string name="btn_register">Đăng kí</string>
+    <string name="btn_reset">Xoá dữ liệu</string>
     <string name="msg_fix_errors">Có %1$d trường thông tin chưa hợp lệ, vui lòng kiểm tra lại!</string>
     <string name="msg_register_success">Đăng kí thành công!</string>
 

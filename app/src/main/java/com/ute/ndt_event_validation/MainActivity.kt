@@ -1,11 +1,13 @@
 package com.ute.ndt_event_validation
 
 import android.os.Bundle
+import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.widget.doAfterTextChanged
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.ute.ndt_event_validation.databinding.ActivityMainBinding
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val input: TextInputEditText,
         val validator: (String) -> Int?,
     ) {
+        var touched = false
         val text: String get() = input.text?.toString().orEmpty()
     }
 
@@ -45,7 +48,31 @@ class MainActivity : AppCompatActivity() {
             FormField(binding.tilClassName, binding.edtClassName, Validator::validateClassName),
         )
 
+        setupFieldEvents()
+
         binding.btnRegister.setOnClickListener { onRegisterClicked() }
+        binding.btnReset.setOnClickListener { resetForm() }
+
+        binding.edtClassName.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                onRegisterClicked()
+                true
+            } else false
+        }
+    }
+
+    private fun setupFieldEvents() {
+        fields.forEach { field ->
+            field.input.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus && field.text.isNotEmpty()) {
+                    field.touched = true
+                    validateField(field)
+                }
+            }
+            field.input.doAfterTextChanged {
+                if (field.touched) validateField(field)
+            }
+        }
     }
 
     private fun validateField(field: FormField): Boolean {
@@ -63,6 +90,7 @@ class MainActivity : AppCompatActivity() {
         var invalidCount = 0
         var firstInvalid: FormField? = null
         fields.forEach { field ->
+            field.touched = true
             if (!validateField(field)) {
                 invalidCount++
                 if (firstInvalid == null) firstInvalid = field
@@ -89,5 +117,15 @@ class MainActivity : AppCompatActivity() {
             className = binding.edtClassName.text.toString().trim().uppercase(),
         )
         startActivity(intent)
+    }
+
+    private fun resetForm() {
+        fields.forEach { field ->
+            field.touched = false
+            field.input.text = null
+            field.layout.error = null
+            field.layout.isErrorEnabled = false
+        }
+        binding.edtFullName.requestFocus()
     }
 }
