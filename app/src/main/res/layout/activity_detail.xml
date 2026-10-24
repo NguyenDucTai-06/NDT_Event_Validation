@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -19,6 +20,73 @@
             android:text="@string/title_detail"
             android:textAppearance="?attr/textAppearanceHeadlineMedium"
             android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/subtitle_detail"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Filled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    style="@style/DetailLabel"
+                    android:text="@string/label_full_name" />
+
+                <TextView
+                    android:id="@+id/tvFullName"
+                    style="@style/DetailValue"
+                    tools:text="Nguyễn Văn An" />
+
+                <TextView
+                    style="@style/DetailLabel"
+                    android:text="@string/label_email" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    style="@style/DetailValue"
+                    tools:text="an.nguyen@gmail.com" />
+
+                <TextView
+                    style="@style/DetailLabel"
+                    android:text="@string/label_phone" />
+
+                <TextView
+                    android:id="@+id/tvPhone"
+                    style="@style/DetailValue"
+                    tools:text="0912345678" />
+
+                <TextView
+                    style="@style/DetailLabel"
+                    android:text="@string/label_student_id" />
+
+                <TextView
+                    android:id="@+id/tvStudentId"
+                    style="@style/DetailValue"
+                    tools:text="2415053122240" />
+
+                <TextView
+                    style="@style/DetailLabel"
+                    android:text="@string/label_class_name" />
+
+                <TextView
+                    android:id="@+id/tvClassName"
+                    style="@style/DetailValue"
+                    android:layout_marginBottom="0dp"
+                    tools:text="22T1" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBackRegister"

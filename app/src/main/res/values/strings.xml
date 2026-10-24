@@ -1,9 +1,24 @@
 <resources>
     <string name="app_name">NDT_Event_Validation</string>
 
+    <!-- Màn hình Đăng kí -->
     <string name="title_register">Đăng kí sinh viên</string>
+    <string name="subtitle_register">Vui lòng nhập đầy đủ và chính xác thông tin</string>
+    <string name="hint_full_name">Họ và tên</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone">Số điện thoại</string>
+    <string name="hint_student_id">Mã sinh viên (MSV)</string>
+    <string name="hint_class_name">Lớp</string>
     <string name="btn_register">Đăng kí</string>
 
+    <!-- Màn hình Chi tiết -->
     <string name="title_detail">Thông tin chi tiết</string>
+    <string name="subtitle_detail">Thông tin sinh viên đã đăng kí</string>
+    <string name="label_full_name">Họ và tên</string>
+    <string name="label_email">Email</string>
+    <string name="label_phone">Số điện thoại</string>
+    <string name="label_student_id">Mã sinh viên</string>
+    <string name="label_class_name">Lớp</string>
     <string name="btn_back_register">Quay lại Đăng kí</string>
+    <string name="no_data">(chưa có dữ liệu)</string>
 </resources>

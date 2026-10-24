@@ -1,6 +1,5 @@
 package com.ute.ndt_event_validation
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,13 +17,25 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            val systemBars = insets.getInsets(
+                WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.ime()
+            )
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        binding.btnRegister.setOnClickListener {
-            startActivity(Intent(this, DetailActivity::class.java))
-        }
+        binding.btnRegister.setOnClickListener { onRegisterClicked() }
+    }
+
+    private fun onRegisterClicked() {
+        val intent = DetailActivity.newIntent(
+            context = this,
+            fullName = binding.edtFullName.text.toString().trim(),
+            email = binding.edtEmail.text.toString().trim(),
+            phone = binding.edtPhone.text.toString().trim(),
+            studentId = binding.edtStudentId.text.toString().trim(),
+            className = binding.edtClassName.text.toString().trim().uppercase(),
+        )
+        startActivity(intent)
     }
 }
