@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">NDT_Event_Validation</string>
+
+    <string name="title_register">Đăng kí sinh viên</string>
+    <string name="btn_register">Đăng kí</string>
+
+    <string name="title_detail">Thông tin chi tiết</string>
+    <string name="btn_back_register">Quay lại Đăng kí</string>
 </resources>
